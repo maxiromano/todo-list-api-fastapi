@@ -1,23 +1,79 @@
-### Proyecto fastapi de una lista TO-DO con Mongodb y Auth JWT
+# To-Do List API con FastAPI
 
-### Setup
+Este es un proyecto simple de una API de lista de tareas (to-do list) desarrollado con **FastAPI**. Incluye autenticación basada en tokens (sin cifrado) y almacenamiento de datos en **SQLite**.
 
-#### Python y entorno virtual
+## Características
 
-- Instalar python3
+- CRUD completo para tareas
+- Autenticación simple con token (no cifrado)
+- SQLite como base de datos
+- Estructurado en múltiples archivos para mayor organización
 
-- Install Python 3.11.4
+## Instalación
 
+1. **Clona el repositorio:**
 
-- Crear entorno virtual
+```bash
+git clone https://github.com/tu-usuario/tu-repo.git
+cd tu-repo
 
-python3 -m venv venv
+2. **Crea un entorno virtual y actívalo:**
 
+```bash
+python -m venv venv
+source venv/bin/activate  # En Windows: venv\Scripts\activate
 
-- Activar entorno virtual
+3. **Instala las dependencias:**
 
-source venv/bin/activate
+```bash
+pip install -r requirements.txt
 
-- Iniciar Uvicorn
+4. **Ejecuta el servidor:**
 
+```bash
 uvicorn main:app --reload
+
+
+La API estará disponible en: http://localhost:8000
+
+
+API Endpoints
+
+Autenticación
+POST /login: Ingresa y recibe un token.
+
+Cuerpo JSON:
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+Tareas
+⚠️ Todos los endpoints de tareas requieren el header:
+
+Authorization: Bearer <token>
+
+GET /tasks: Lista todas las tareas
+
+GET /tasks/{task_id}: Obtener una tarea por ID
+
+POST /tasks: Crear una nueva tarea
+
+PUT /tasks/{task_id}: Actualizar una tarea
+
+DELETE /tasks/{task_id}: Eliminar una tarea
+
+Base de Datos
+
+La base de datos se crea automáticamente en el archivo todo.db.
+Puedes explorarla con:
+
+```bash
+sqlite3 todo.db
+
+Y luego ejecutar:
+
+.tables
+SELECT * FROM tasks
+
+
