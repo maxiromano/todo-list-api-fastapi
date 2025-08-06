@@ -14,7 +14,6 @@ Este es un proyecto simple de una API de lista de tareas (to-do list) desarrolla
 ### 1. **Clona el repositorio:**
 
 git clone https://github.com/tu-usuario/tu-repo.git
-cd tu-repo
 
 ### 2. **Crea un entorno virtual y actívalo:**
 
