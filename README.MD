@@ -11,33 +11,29 @@ Este es un proyecto simple de una API de lista de tareas (to-do list) desarrolla
 
 ## Instalación
 
-1. **Clona el repositorio:**
+### 1. **Clona el repositorio:**
 
-```bash
 git clone https://github.com/tu-usuario/tu-repo.git
 cd tu-repo
 
-2. **Crea un entorno virtual y actívalo:**
+### 2. **Crea un entorno virtual y actívalo:**
 
-```bash
 python -m venv venv
 source venv/bin/activate  # En Windows: venv\Scripts\activate
 
-3. **Instala las dependencias:**
+### 3. **Instala las dependencias:**
 
-```bash
 pip install -r requirements.txt
 
-4. **Ejecuta el servidor:**
+### 4. **Ejecuta el servidor:**
 
-```bash
 uvicorn main:app --reload
 
 
 La API estará disponible en: http://localhost:8000
 
 
-API Endpoints
+## API Endpoints
 
 Autenticación
 POST /login: Ingresa y recibe un token.
@@ -53,27 +49,24 @@ Tareas
 
 Authorization: Bearer <token>
 
-GET /tasks: Lista todas las tareas
+- GET /tasks: Lista todas las tareas
 
-GET /tasks/{task_id}: Obtener una tarea por ID
+- GET /tasks/{task_id}: Obtener una tarea por ID
 
-POST /tasks: Crear una nueva tarea
+- POST /tasks: Crear una nueva tarea
 
-PUT /tasks/{task_id}: Actualizar una tarea
+- PUT /tasks/{task_id}: Actualizar una tarea
 
-DELETE /tasks/{task_id}: Eliminar una tarea
+- DELETE /tasks/{task_id}: Eliminar una tarea
 
-Base de Datos
+## Base de Datos
 
 La base de datos se crea automáticamente en el archivo todo.db.
 Puedes explorarla con:
 
-```bash
 sqlite3 todo.db
 
 Y luego ejecutar:
 
 .tables
 SELECT * FROM tasks
-
-
