@@ -18,6 +18,7 @@ git clone https://github.com/tu-usuario/tu-repo.git
 ### 2. **Crea un entorno virtual y actívalo:**
 
 python -m venv venv
+
 source venv/bin/activate  # En Windows: venv\Scripts\activate
 
 ### 3. **Instala las dependencias:**
@@ -68,4 +69,5 @@ sqlite3 todo.db
 Y luego ejecutar:
 
 .tables
+
 SELECT * FROM tasks
